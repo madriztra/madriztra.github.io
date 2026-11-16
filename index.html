@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#101114"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="Insta Agent"><link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="icon.svg"><title>Insta Agent</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="brand"><div class="mark">✳</div><div><b>Insta Agent</b><small>Instagram workspace</small></div></div><button id="installBtn" class="ghost" hidden>Install</button></header>
+<main>
+<section class="hero"><div class="eyebrow">YOUR CREATIVE WORKSPACE</div><h1>Grow with<br><span>better content.</span></h1><p>Riset, rencanakan, tulis, dan evaluasi konten Instagram dari satu tempat.</p><div class="hero-actions"><button class="primary" data-open="ig-reel">＋ Buat konten</button><button class="secondary" data-open="ig-plan">Lihat planner</button></div></section>
+<section class="stats"><div><strong>13</strong><small>AI workflows</small></div><div><strong id="draftCount">0</strong><small>Draft tersimpan</small></div><div><strong>iOS</strong><small>Ready</small></div></section>
+<section class="section-head"><div><div class="eyebrow">WORKSPACE</div><h2>Content tools</h2></div><span class="pill">13 tools</span></section>
+<div class="tool-grid" id="toolGrid"></div>
+<section class="panel"><div class="section-head"><div><div class="eyebrow">QUICK ACCESS</div><h2>Brand voice</h2></div><span class="pill">Local</span></div><p class="muted">Simpan karakter bahasa dan detail brand agar draft berikutnya lebih konsisten.</p><label>Nama brand<input id="brandName" placeholder="Contoh: Loana Coffee"></label><label>Karakter komunikasi<textarea id="brandVoice" rows="3" placeholder="Contoh: hangat, santai, tidak terlalu formal..."></textarea></label><label>Kata kunci utama<input id="brandKeywords" placeholder="coffee shop Pekanbaru, kopi susu..."></label><button class="primary full" id="saveBrand">Simpan brand voice</button></section>
+<section class="panel"><div class="section-head"><div><div class="eyebrow">YOUR WORK</div><h2>Saved drafts</h2></div><button class="text-btn" id="clearDrafts">Hapus semua</button></div><div id="draftList" class="draft-list"><p class="muted">Belum ada draft tersimpan.</p></div></section>
+</main>
+<nav class="tabbar"><button class="active" data-tab="home">⌂<small>Home</small></button><button data-open="ig-plan">▦<small>Planner</small></button><button data-open="ig-reel">✳<small>Create</small></button><button data-tab="saved">▤<small>Saved</small></button></nav>
+<div class="modal" id="toolModal" aria-hidden="true"><div class="sheet"><div class="sheet-top"><span class="pill" id="toolCategory">CONTENT</span><button class="close" id="closeModal">✕</button></div><h2 id="toolTitle">Tool</h2><p id="toolDesc" class="muted"></p><div id="toolForm"></div><div class="result-wrap" id="resultWrap" hidden><div class="result-head"><b>Output</b><button class="text-btn" id="copyResult">Copy</button></div><pre id="toolResult"></pre><button class="secondary full" id="saveResult">Simpan draft</button></div></div></div>
+<script src="app.js"></script>
+</body></html>
